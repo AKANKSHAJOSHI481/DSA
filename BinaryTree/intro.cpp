@@ -156,31 +156,64 @@ node* buildTree(node* root) {
     return root;
 
 }
+
+// build a tree using level order inputs.
+
+void LevelOrderTree(node* &root) {
+    queue<node*> q;
+    int data;
+    cout << "Enter data for root" << endl;
+    cin >> data;
+    root = new node(data);
+    q.push(root);
+    while(!q.empty()) {
+        node* temp = q.front();
+        q.pop();
+        cout << "Enter data for left node of "<< temp->data << endl;
+        int leftData;
+        cin >> leftData;
+        if(leftData != -1){
+            temp->left = new node(leftData);
+            q.push(temp->left);
+        }
+        cout << "Enter data for right node of "<< temp->data << endl;
+        int rightData;
+        cin >> rightData;
+        if(rightData != -1){
+            temp->right = new node(rightData);
+            q.push(temp->right);
+        }
+
+    
+    }   
+   
+
+}
 int main()
 {
     node* root = NULL;
-    root = buildTree(root);
-    cout << "Level Order Traversal" << endl;
+    LevelOrderTree(root); //
     levelOrderTraversal(root);
-    cout <<"Inorder Traversal Recursion" << endl;
-    inorder(root);
-    cout << endl;
-    cout <<"Inorder Traversal Iteration" << endl;
-    inorderI(root);
-    cout << endl;
-    cout <<"Preorder Traversal Recursion" << endl;
-    preorder(root);
-    cout << endl;
-    cout <<"Preorder Traversal Iteration" << endl;
-    preorderI(root);
-    cout << endl;
-    
-
-    cout <<"Postorder Traversal Recursion" << endl;
-    postorder(root);
-    cout << endl;
-    cout <<"Postorder Traversal Iteration" << endl;
-    postOrderI(root);
-    cout << endl;
+    // root = buildTree(root);
+    // cout << "Level Order Traversal" << endl;
+    // levelOrderTraversal(root);
+    // cout <<"Inorder Traversal Recursion" << endl;
+    // inorder(root);
+    // cout << endl;
+    // cout <<"Inorder Traversal Iteration" << endl;
+    // inorderI(root);
+    // cout << endl;
+    // cout <<"Preorder Traversal Recursion" << endl;
+    // preorder(root);
+    // cout << endl;
+    // cout <<"Preorder Traversal Iteration" << endl;
+    // preorderI(root);
+    // cout << endl;
+    // cout <<"Postorder Traversal Recursion" << endl;
+    // postorder(root);
+    // cout << endl;
+    // cout <<"Postorder Traversal Iteration" << endl;
+    // postOrderI(root);
+    // cout << endl;
     return 0;
 }
