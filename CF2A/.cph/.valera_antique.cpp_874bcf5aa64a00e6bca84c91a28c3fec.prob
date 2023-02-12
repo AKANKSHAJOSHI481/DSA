@@ -1,0 +1,1 @@
+{"name":"Local: valera_antique","url":"d:\\DSA\\Questions\\CF2A\\valera_antique.cpp","tests":[{"id":1661942431022,"input":"3 50000\n1 50000\n3 100000 120000 110000\n3 120000 110000 120000\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\Questions\\CF2A\\valera_antique.cpp","group":"local","local":true}

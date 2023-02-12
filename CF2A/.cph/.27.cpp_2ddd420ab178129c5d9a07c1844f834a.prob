@@ -1,0 +1,1 @@
+{"name":"Local: 27","url":"d:\\DSA\\Questions\\CF2A\\27.cpp","tests":[{"id":1661004389799,"input":"aaaa\naaaA\n","output":""},{"id":1661004395257,"input":"abs\nAbz\n","output":""},{"id":1661004700407,"input":"abcdefg\nAbCdEfF","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA\\Questions\\CF2A\\27.cpp","group":"local","local":true}
