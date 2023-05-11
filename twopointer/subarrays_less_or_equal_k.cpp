@@ -26,8 +26,8 @@ int solve(int*arr, int n, int k){
 }
 
 int main(){
-    int n = 8, k = 10;
-    int arr[n] = {8,2,6,2,1,1,4,2};
+    int n = 3, k = 10;
+    int arr[n] = {2, 5, 6};
     cout << solve(arr,n, k) << endl;
     return 0;
 }

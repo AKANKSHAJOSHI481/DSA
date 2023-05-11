@@ -5,12 +5,12 @@ int solve(int* arr, int n, int x){
      int j = n-1;
      int count = 0;
      while(i < j){
-        if(arr[i] + arr[j] < x){
+        if(arr[i] + arr[j] >= x){
             count += j-i;
-            i++;
+            j--;
         }
         else{
-            j--;
+            i++;
         }
      }
      return count;
