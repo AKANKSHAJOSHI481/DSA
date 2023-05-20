@@ -23,8 +23,8 @@ int solve(string str , int k){
 }
 
 int main(){
-   string str = "abc";
-   int k = 2;
-   cout << solve(str, k))<< endl;
+   string str = "aabacbebebe";
+   int k = 3;
+   cout << solve(str, k) - solve(str, k+1)<< endl;
     return 0;
 }

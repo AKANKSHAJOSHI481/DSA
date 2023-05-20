@@ -1,25 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 int solve(int*arr, int n, int k){
-     int res = 0;
+     int res = n;
      int j = 0;
      int sum = 0;
      for(int i=0; i<n; i++){
-        while(sum <= k && j<=n-1){
-            sum += arr[j];
+         sum += arr[j];
             j++;
-            res = max(res, j-i);
+        while(sum >= k && j<=n-1){
+           
+            res = min(res, j-i+1);
             cout << i << " " << j << " " << res << " " << sum << endl;
+            sum = sum - arr[i];
         }
-        sum = sum - arr[i];
+        
 
      }
      return res;
 }
 
 int main(){
-    int n = 8, k = 10;
-    int arr[n] = {8,2,6,-8,1,1,4,2};
+    int n = 8, k = 4;
+    int arr[n] = {1,4,4};
     cout << solve(arr,n, k) << endl;
     return 0;
 }
